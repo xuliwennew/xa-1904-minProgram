@@ -1,0 +1,9 @@
+<slot />
+
+<view><text>{{title}}</text></view>
+<view>
+   <text style="font-size:60rpx">{{user.name}}</text>
+   <text style="color:red" bindtap="delUser"> x </text>
+</view>
+
+<button bindtap="updateTitle">修改Title</button>

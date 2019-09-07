@@ -1,0 +1,6 @@
+
+<w-world binddel="delUserByID" idx="{{index}}" wx:key="{{index}}" user="{{item}}" wx:for="{{users}}">
+
+<text>helloadfoasdfasdfasdfasdf</text>
+
+</w-world>

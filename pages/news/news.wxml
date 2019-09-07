@@ -1,0 +1,25 @@
+<!-- <template name="v1">
+  <text>
+      view1
+   </text>
+</template>
+<template name="v2">
+  <text>
+      view2
+   </text>
+</template> -->
+
+<w-hello content="xxxx" title="from news pages title"/>
+ 
+<wxs src="../../wxs/hello.wxs" module="xx" />
+<include src="../../templates/common/header.wxml" />
+<import src="../../templates/one.wxml" />
+<import src="../../templates/two.wxml" />
+<view style="width:750rpx;height:300px;background-color:#ccc">
+  <view>
+    <text id="1" bindtap="toggle">v1-{{xx.a}}</text>|
+    <text id="2" bindtap="toggle">v2</text>
+  </view>
+  <template is="{{tpl}}" />
+</view>
+<include src="../../templates/common/footer.wxml" />

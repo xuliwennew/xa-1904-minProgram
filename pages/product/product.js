@@ -2,26 +2,11 @@ Page({
 
   /**
    * 页面的初始数据
+   * 数据结构 observer proxy 
    */
   data: {
-    num:0
-  },
-
-  showMe(e){
-    console.log(e)
-  },
-
-  update(){
-     //react
-     console.log(this.data.num) 
-     this.setData({
-       num:++this.data.num
-     })
-  },
-  goUrl(){
-    wx.navigateTo ({
-      url: '/pages/test/test',
-    })
+    msg:"hello show!",
+    list: [1, 1, 1, 1, 1, 1, 1, 1, 1]
   },
 
   /**
@@ -64,19 +49,26 @@ Page({
    */
   onPullDownRefresh: function () {
     console.log("onPullDownRefresh")
+    this.setData({
+      msg:"hello refresh msg"
+    })
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    console.log("onReachBottom")
+    let arr = [1,1,1,1,1,1,1]
+    this.setData({
+      list:this.data.list.concat(arr)
+    })
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+    console.log("用户点击右上角分享")
   }
 })

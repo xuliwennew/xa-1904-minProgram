@@ -1,0 +1,6 @@
+<text>{{msg}}</text>
+<view class="list">
+   <view class="item" wx:for="{{list}}">
+     <text style="font-size:30px;">{{index}}</text>
+   </view>
+</view>

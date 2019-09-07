@@ -1,82 +1,82 @@
+
+import carts from "../../apis/carts.js"
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    num:0
-  },
-
-  showMe(e){
-    console.log(e)
-  },
-
-  update(){
-     //react
-     console.log(this.data.num) 
-     this.setData({
-       num:++this.data.num
-     })
-  },
-  goUrl(){
-    wx.navigateTo ({
-      url: '/pages/test/test',
-    })
+     users:[
+       {name:"张三"},
+       {name:"李四"}
+     ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    carts.getDataInfo(data=>{
+      console.log(data)
+    })
+  },
+
+  delUserByID(e){
+    console.log(e.detail.id)
+    this.data.users.splice(e.detail.id,1)
+
+    this.setData({
+      users:this.data.users
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+     
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    console.log("onPullDownRefresh")
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+
   }
 })

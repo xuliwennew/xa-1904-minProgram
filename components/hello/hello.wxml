@@ -1,0 +1,3 @@
+ 
+<text>{{title}} {{content}}</text>
+<button bindtap="changeTitle">change Msg</button>

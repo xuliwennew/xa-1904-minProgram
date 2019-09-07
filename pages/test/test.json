@@ -2,7 +2,7 @@
   "backgroundTextStyle": "dark",
   "backgroundColor": "#00f",
   "navigationBarBackgroundColor": "#ccc",
-  "navigationBarTitleText": "日志",
-  "navigationBarTextStyle": "white" 
-   
+  "navigationBarTitleText": "导航",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {}
 }
